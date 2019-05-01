@@ -1,0 +1,12 @@
+{% spaceless %}
+  {#
+    Teaser Router
+  #}
+  
+  {%- include [
+    '_teasers/' ~ entry.section.handle ~ '/' ~ entry.type.handle,
+    '_teasers/' ~ entry.section.handle ~ '/default',
+    '_teasers/' ~ entry.section.handle,
+    '_teasers/default',
+  ] -%}
+{% endspaceless %}
