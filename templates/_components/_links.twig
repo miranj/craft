@@ -1,0 +1,43 @@
+{# _components/_links #}
+
+{#
+  Links
+
+  Generate a list of links
+
+  @param   list         {MatrixField}       Matrix field to be rendered
+  @param   class        {string}            Class names to apply to the img tag
+#}
+
+
+
+{# Parameters #}
+{% set linksList = params.list.all() ?? false %}
+{% set linksClass = params.class ?? '' %}
+{% set linksItemClass = params.itemClass ?? '' %}
+{% set linksListClass = params.listClass ?? '' %}
+
+
+{# Output #}
+{% block links_list %}
+  {% for _link in linksList %}
+    {% if loop.first %}
+      <ul{% if linksListClass %} class="{{ linksListClass }}"{% endif %}>
+    {% endif %}
+
+    {% block links_list_item %}
+      <li{% if linksItemClass %} class="{{ linksItemClass }}"{% endif %}>
+        {% set linksItemLinkParameters = { class: linksClass } %}
+        {% block links_list_item_link %}
+          {% filter enkode_emails %}
+            {{ _link.typedLink.getLink(linksItemLinkParameters) }}
+          {% endfilter %}
+        {% endblock %}
+      </li>
+    {% endblock %}
+
+    {% if loop.last %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
