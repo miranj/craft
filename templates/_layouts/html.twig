@@ -8,7 +8,7 @@
       <meta charset="utf-8"/>
 
       {% for sheet in styles %}
-    <link rel="stylesheet" href="{{ sheet }}">
+        <link rel="stylesheet" href="{{ sheet }}">
       {% endfor %}
 
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -26,7 +26,7 @@
       {% endblock %}
 
       <script>
-        document.documentElement.className = document.documentElement.className.replace('has-no-js', 'has-js');
+          document.documentElement.className = document.documentElement.className.replace('has-no-js', 'has-js');
       </script>
       {% block head_end %}{% endblock %}
 
@@ -36,16 +36,16 @@
   <body class="{% block body_class %}{% endblock %}">
 
 
-  {% block page %}
-  {% endblock %}
+    {% block page %}
+    {% endblock %}
 
 
 
-  {% for script in scripts %}
-    <script async src="{{ script }}"></script>
-  {% endfor %}
+    {% for script in scripts %}
+      <script async src="{{ script }}"></script>
+    {% endfor %}
 
-  {% block body_end %}{% endblock %}
+    {% block body_end %}{% endblock %}
   </body>
   </html>
 {% endblock %}

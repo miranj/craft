@@ -41,8 +41,7 @@
     {% set htmlCacheKey = cacheKeyPrefix
       ~ '-css:' ~ assetManifest['style.purged.min.css']
       ~ '-js:' ~ assetManifest['urgent.min.js'] ~ assetManifest['deferred.min.js']
-      ~ '-html:v1'
-    %}
+      ~ '-html:v1' %}
 
     {# Figure out if page should be cached #}
     {%- if cacheableEnv %}
