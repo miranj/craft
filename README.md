@@ -27,7 +27,6 @@ with easy custom configuration of styling.
     - [fontloader](https://gist.github.com/vidurb/4e2c2cba3affe643ff18bd4eaf869678)
 * And lastly our [template architecture](https://miranj.in/blog/2019/modular-architecture-for-building-content-websites).
 
-More documentation to come.
 
 Original Craft CMS documentation follows:
 
