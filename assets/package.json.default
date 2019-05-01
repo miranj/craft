@@ -1,5 +1,5 @@
 {
-    "name": "miranj/craft-build",
+    "name": "miranj-craft-build",
     "version": "0.0.1",
     "main": "gulp.js",
     "author": "Miranj",
