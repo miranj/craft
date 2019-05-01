@@ -1,6 +1,7 @@
 {
   "name": "miranj/craft",
   "description": "Miranj flavour of Craft CMS",
+  "version": "1.0.0-dev",
   "keywords": [
     "craft",
     "cms",
