@@ -5,6 +5,7 @@
     "author": "Miranj",
     "devDependencies": {
         "autoprefixer": "^9.4.7",
+        "fontfaceobserver": "^2.1.0",
         "gulp": "^4.0.0",
         "gulp-clean-css": "^4.0.0",
         "gulp-concat": "^2.6.1",
