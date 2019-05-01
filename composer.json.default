@@ -1,8 +1,9 @@
 {
   "require": {
     "craftcms/cms": "^3.0.0",
+    "craftcms/redactor": "^2.3.3.2",
+    "verbb/expanded-singles": "^1.0.7",
     "vlucas/phpdotenv": "^2.4.0"
-    "verbb/expanded-singles": "^1.0.7"
   },
   "autoload": {
     "psr-4": {
