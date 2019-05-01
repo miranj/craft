@@ -63,22 +63,22 @@ paths.tasks = {
         'node_modules/fontfaceobserver/fontfaceobserver.js',
         'node_modules/fontloader/fontloader.js',
         'node_modules/lazysizes/lazysizes.js',
-        'js/lazyinit.js'
+        'js/lazyinit.js',
       ],
       destination: 'urgent.js',
       watch: [
-        'js/lazyinit.js'
+        'js/lazyinit.js',
       ],
     },
     deferred: {
       source: [
         'node_modules/pjax/pjax.min.js',
         'node_modules/topbar/topbar.min.js',
-        'js/pjaxinit.js'
+        'js/pjaxinit.js',
       ],
       destination: 'deferred.js',
       watch: [
-        'js/pjaxinit.js'
+        'js/pjaxinit.js',
       ],
     },
   },

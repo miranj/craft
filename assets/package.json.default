@@ -1,11 +1,13 @@
 {
-    "name": "miranj-craft-build",
+
+    "name": "miranj/craft-build",
     "version": "0.0.1",
     "main": "gulp.js",
     "author": "Miranj",
     "devDependencies": {
         "autoprefixer": "^9.4.7",
-        "webfontloader": "^1.6.28",
+        "fontfaceobserver": "^2.1.0",
+        "fontloader": "gist:4e2c2cba3affe643ff18bd4eaf869678",
         "gulp": "^4.0.0",
         "gulp-clean-css": "^4.0.0",
         "gulp-concat": "^2.6.1",
