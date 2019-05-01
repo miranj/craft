@@ -2,6 +2,7 @@
   {#
     Lister Router
   #}
+  
   {% if collection|length %}
     {%- include [
       '_listers/' ~ collection[0].section.handle ~ '/' ~ collection[0].type.handle,
