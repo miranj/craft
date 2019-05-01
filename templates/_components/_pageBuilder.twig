@@ -1,0 +1,29 @@
+{# _components/_pageBuilder #}
+
+
+
+{# Params #}
+{# @var builderComponents \craft\elements\MatrixBlock #}
+{% set builderClass = params.class ?? '' %}
+{% set builderComponents = params.components.all() ?? [] %}
+
+
+
+{# Render #}
+{% for component in builderComponents %}
+
+  {% if loop.first and builderClass %}
+    <div class="{{ builderClass }}">
+  {% endif %}
+
+  {% include '_routers/component.twig' with {
+    entry: entry,
+    params: component|merge({
+      type: component.type()
+    })
+  } only %}
+
+  {% if loop.last and builderClass %}
+    </div>
+  {% endif %}
+{% endfor %}
