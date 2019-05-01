@@ -34,7 +34,6 @@
   '--retina':   '(min-resolution: 192dpi)',
 } %}
 {% set presets = {} %}
-{# {% set imageAsset = imageAsset and not craft.embeddedAssets.isEmbedded(imageAsset) ? imageAsset : false %} #}
 {% if imageAsset %}
   {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
   {% set imageAlt = imageAlt ?: imageAsset.title %}
