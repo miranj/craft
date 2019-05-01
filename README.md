@@ -25,7 +25,7 @@ with easy custom configuration of styling.
     - [lazySizes](https://github.com/aFarkas/lazysizes)
     - [fontfaceobserver](https://github.com/bramstein/fontfaceobserver)
     - [fontloader](https://gist.github.com/vidurb/4e2c2cba3affe643ff18bd4eaf869678)
-* And lastly our template hierarchy and organization.
+* And lastly our [template architecture](https://miranj.in/blog/2019/modular-architecture-for-building-content-websites).
 
 More documentation to come.
 
