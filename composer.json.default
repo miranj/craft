@@ -6,6 +6,7 @@
     "topshelfcraft/environment-label": "^3.1.5",
     "verbb/expanded-singles": "^1.0.7",
     "vlucas/phpdotenv": "^2.4.0"
+    "nystudio107/craft-typogrify": "^1.1.17"
   },
   "autoload": {
     "psr-4": {
