@@ -23,7 +23,8 @@ with easy custom configuration of styling.
 * Miranj's preferred JS utilities:
     - [PJAX](https://github.com/MoOx/pjax)
     - [lazySizes](https://github.com/aFarkas/lazysizes)
-    - [Web Font Loader](https://github.com/typekit/webfontloader)
+    - [fontfaceobserver](https://github.com/bramstein/fontfaceobserver)
+    - [fontloader](https://gist.github.com/vidurb/4e2c2cba3affe643ff18bd4eaf869678)
 * And lastly our template hierarchy and organization.
 
 More documentation to come.
