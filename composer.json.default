@@ -1,7 +1,8 @@
 {
   "require": {
     "craftcms/cms": "^3.0.0",
-    "vlucas/phpdotenv": "^2.4.0"
+    "vlucas/phpdotenv": "^2.4.0",
+    "aelvan/imager": "^2.1.10"
   },
   "autoload": {
     "psr-4": {
