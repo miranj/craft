@@ -1,22 +1,20 @@
 {
-  "name": "craftcms/craft",
-  "description": "Craft CMS",
+  "name": "miranj/craft",
+  "description": "Miranj flavour of Craft CMS",
   "keywords": [
     "craft",
     "cms",
     "craftcms",
-    "project"
+    "project",
+    "miranj"
   ],
-  "license": "Unlicense",
-  "homepage": "https://craftcms.com/",
+  "license": "MIT",
+  "homepage": "https://miranj.in/",
   "type": "project",
   "support": {
-    "email": "support@craftcms.com",
     "issues": "https://github.com/craftcms/cms/issues",
-    "forum": "https://craftcms.stackexchange.com/",
     "source": "https://github.com/craftcms/cms",
-    "docs": "https://craftcms.com/docs",
-    "rss": "https://craftcms.com/changelog.rss"
+    "docs": "https://craftcms.com/docs"
   },
   "require": {
     "craftcms/cms": "^3.0.0",
