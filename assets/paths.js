@@ -67,6 +67,7 @@ paths.tasks = {
       ],
       destination: 'urgent.js',
       watch: [
+        'js/lazyinit.js'
       ],
     },
     deferred: {
@@ -77,6 +78,7 @@ paths.tasks = {
       ],
       destination: 'deferred.js',
       watch: [
+        'js/pjaxinit.js'
       ],
     },
   },
