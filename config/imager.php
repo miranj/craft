@@ -34,7 +34,7 @@ return [
             ],
         ],
 
-        'clearKey' => 'SH0ZDR%PVbqwg%k7lMt&t0tyHWRp0Bh@',
+    //    'clearKey' => '',
     ],
 
 
