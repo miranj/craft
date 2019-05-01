@@ -2,11 +2,12 @@
   {#
     Lister Router
   #}
-
-  {%- include [
-    '_listers/' ~ collection[0].section.handle ~ '/' ~ collection[0].type.handle,
-    '_listers/' ~ collection[0].section.handle ~ '/default',
-    '_listers/' ~ collection[0].section.handle,
-    '_listers/default',
-    ] -%}
+  {% if collection|length %}
+    {%- include [
+      '_listers/' ~ collection[0].section.handle ~ '/' ~ collection[0].type.handle,
+      '_listers/' ~ collection[0].section.handle ~ '/default',
+      '_listers/' ~ collection[0].section.handle,
+      '_listers/default',
+      ] -%}
+  {% endif %}
 {% endspaceless %}
