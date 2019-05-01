@@ -6,7 +6,7 @@
 
   {% set cacheableEnv = (not craft.app.request.isLivePreview) and craft.app.request.getParam('token') == NULL %}
   {% set cacheableEnv = cacheableEnv and craft.app.request.getParam('nocache') is same as(NULL) %}
-  {% set cacheableEnv = cacheableEnv and craft.app.request.isPost()|length == 0 %}
+  {% set cacheableEnv = cacheableEnv and not craft.app.request.isPost %}
   {% set cacheableEnv = cacheableEnv and not (doNotCache ?? false) %}
   {% set cacheableEnv = cacheableEnv and not craft.app.session.hasFlash('error') %}
   {% set cacheableEnv = cacheableEnv and not craft.app.session.hasFlash('notice') %}
