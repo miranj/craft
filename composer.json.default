@@ -10,6 +10,7 @@
     "verbb/expanded-singles": "^1.0.7",
     "verbb/element-index-defaults": "^1.0.3",
     "vlucas/phpdotenv": "^2.4.0"
+    "mmikkel/cache-flag": "^1.0.3"
   },
   "autoload": {
     "psr-4": {
