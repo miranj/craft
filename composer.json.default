@@ -2,9 +2,10 @@
   "require": {
     "craftcms/cms": "^3.0.0",
     "craftcms/redactor": "^2.3.3.2",
+    "doublesecretagency/craft-inventory": "^2.0.2",
+    "topshelfcraft/environment-label": "^3.1.5",
     "verbb/expanded-singles": "^1.0.7",
     "vlucas/phpdotenv": "^2.4.0"
-    "doublesecretagency/craft-inventory": "^2.0.2"
   },
   "autoload": {
     "psr-4": {
