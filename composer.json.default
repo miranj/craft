@@ -1,8 +1,14 @@
 {
   "require": {
     "craftcms/cms": "^3.0.0",
-    "vlucas/phpdotenv": "^2.4.0",
-    "nystudio107/craft-minify": "^1.2.9"
+    "craftcms/redactor": "^2.3.3.2",
+    "doublesecretagency/craft-inventory": "^2.0.2",
+    "nystudio107/craft-minify": "^1.2.9",
+    "nystudio107/craft-typogrify": "^1.1.17",
+    "topshelfcraft/environment-label": "^3.1.5",
+    "verbb/expanded-singles": "^1.0.7",
+    "verbb/element-index-defaults": "^1.0.3",
+    "vlucas/phpdotenv": "^2.4.0"
   },
   "autoload": {
     "psr-4": {
