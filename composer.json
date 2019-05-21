@@ -1,6 +1,6 @@
 {
   "name": "miranj/craft",
-  "description": "Miranj flavour of Craft CMS",
+  "description": "Miranj's Craft CMS boilerplate starter project",
   "version": "1.0.0-dev",
   "keywords": [
     "craft",
