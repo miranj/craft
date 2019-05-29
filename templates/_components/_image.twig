@@ -166,6 +166,7 @@
       }
       {% for source in imageSources|reverse %}
       @media {{ source.media }} {
+        {{ (source.type ?? '') == 'image/webp' ? '.has-webp ' -}}
         .{{ imageCssClass }} {
           background-image: url('{{ (source.transforms|last).url }}');
         }
