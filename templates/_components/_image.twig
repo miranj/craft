@@ -101,7 +101,7 @@
 {% from _self import renderTag %}
 
 {% if imageAsset and not imageIsCss %}
-  {% if imageIsResponsive %}
+  {% if imageSources|length %}
     <picture>
   {% endif %}
 
@@ -155,7 +155,7 @@
     'data-srcset': imageLazyload ? craft.imager.srcset(imageTransforms),
   }:{})) }}
 
-  {% if imageIsResponsive %}
+  {% if imageSources|length %}
     </picture>
   {% endif %}
 {% elseif imageAsset and imageIsCss %}
