@@ -26,6 +26,15 @@
         cacheBust: false,
     });
 
+    // Override handleResponse to treat 404 responses similar to 200 responses
+    pjax._handleResponse = pjax.handleResponse;
+    pjax.handleResponse = function (responseText, request, href, options) {
+      if (request.status === 404) {
+        pjax._handleResponse(request.responseText, request, href, options);
+      } else {
+        pjax._handleResponse(responseText, request, href, options);
+      }
+    };
 
     // Fire app's main() function on a new page load
     if (window.main) {
