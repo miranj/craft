@@ -27,31 +27,31 @@ return [
         'subLeft' => true,
         'subRight' => true,
       ],
-
+      
       // region
-      //'timezone' => 'America/New_York',
+      'timezone' => 'Asia/Kolkata',
       'defaultWeekStartDay' => '1',
-
+      'defaultCpLanguage' => 'en-GB',
+      
       'aliases' => [
         '@assetBaseUrl' => getenv('ASSET_BASE_URL'),
         '@assetBasePath' => getenv('ASSET_BASE_PATH'),
       ],
     ],
-
+    
     // Dev environment settings
     'dev' => [
       'devMode' => true,
       'enableTemplateCaching' => false,
-      'timezone' => 'Asia/Kolkata',
     ],
-
+    
     // Staging environment settings
     'staging' => [
-      'devMode' => true,
+      'devMode' => false,
       'allowAdminChanges' => false,
       'disabledPlugins' => ['inventory'],
     ],
-
+    
     // Production environment settings
     'production' => [
       'devMode' => false,
