@@ -2,9 +2,9 @@
 
 {#
   Image
-
+  
   Generate image transforms and render images
-
+  
   @param   asset        {AssetFileModel}    Image asset to be rendered
   @param   preset       {string}            Image usage preset
   @param   class        {string}            Class names to apply to the img tag
@@ -38,8 +38,8 @@
   {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
   {% set imageAlt = imageAlt ?: imageAsset.title %}
   {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
-
-
+  
+  
   {% set imageDefault = null %}
   {% set imageSizesGuide = false %}
   {% set imageTransforms = [] %}
@@ -59,7 +59,7 @@
       {% set imageDefault = imageTransforms|last %}
       {% set imageSizesGuide = (imagePreset.guide ?? '')|replace(queries) ?: false %}
       {% set imageSourcesMedia = (imagePreset.media ?? '(min-width: 0)')|replace(queries) %}
-
+      
       {# Generate WebP versions and put them before regular ones #}
       {% if craft.imager.serverSupportsWebp %}
         {% set imageTransformsWebP = craft.imager.transformImage(
@@ -73,7 +73,7 @@
           transforms: imageTransformsWebP,
         }]) %}
       {% endif %}
-
+      
       {% if imagePreset.media is defined %}
         {% set imageSources = imageSources|merge([{
           media: imageSourcesMedia,
@@ -104,7 +104,7 @@
   {% if imageSources|length %}
     <picture>
   {% endif %}
-
+  
   {% if imageLazyload %}
     {# Non JS fallback #}
     <noscript>
@@ -117,44 +117,46 @@
       }) }}
     </noscript>
   {% endif %}
-
+  
   {% for source in imageSources %}
+    {% set lastTransform = source.transforms|last %}
     <!--[if IE 9]><audio><![endif]-->
     {{ renderTag('source', {
       media: source.media,
       type: source.type ?? false,
-      width:  (source.transforms|last).width,
-      height: (source.transforms|last).height,
+      width: lastTransform.width,
+      height: lastTransform.height,
       srcset: craft.imager.srcset(source.transforms),
-
+      
     } | merge(imageLazyload ? {
       srcset: craft.imager.placeholder({
-        width: (source.transforms|last).width,
-        height:(source.transforms|last).height,
-        color: imageColour}),
+        width: lastTransform.width,
+        height: lastTransform.height,
+        color: imageColour
+      }),
       'data-srcset': craft.imager.srcset(source.transforms),
     }:{})) }}
     <!--[if IE 9]></audio><![endif]-->
   {% endfor %}
-
+  
   {{ renderTag('img', {
     class: imageClass ~ ' ' ~ (imageLazyload ? 'lazyload nonjs-hidden' : 'lazyloaded'),
     src: imageDefault.url,
     alt: imageAlt|e('html_attr'),
     width:  not imageIsResponsive ? imageDefault.width * imageScaleFactor,
     height: not imageIsResponsive ? imageDefault.height * imageScaleFactor,
-
+    
   } | merge(imageLazyload ? {
     src: craft.imager.base64Pixel(imageDefault.width, imageDefault.height, imageColour),
     'data-src': imageDefault.url,
-
+    
   }:{}) | merge(imageTransforms is defined and imageTransforms|length > 1 ? {
     sizes: imageSizesGuide ?? false,
     srcset: not imageLazyload ? craft.imager.srcset(imageTransforms),
     'data-sizes': imageLazyload and not (imageSizesGuide ?? true) ? 'auto',
     'data-srcset': imageLazyload ? craft.imager.srcset(imageTransforms),
   }:{})) }}
-
+  
   {% if imageSources|length %}
     </picture>
   {% endif %}
