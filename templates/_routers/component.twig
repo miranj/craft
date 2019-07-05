@@ -1,0 +1,12 @@
+{% spaceless %}
+  {#
+    Component Router
+    @var entry \craft\elements\Entry
+  #}
+
+  {%- include [
+    '_components/' ~ entry.section.handle ~ '/' ~ entry.type.handle ~ '/' ~ params.type.handle,
+    '_components/' ~ entry.section.handle ~ '/' ~ params.type.handle,
+    '_components/' ~ params.type.handle,
+    ] -%}
+{% endspaceless %}
