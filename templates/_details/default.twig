@@ -1,0 +1,30 @@
+{% extends '_layouts/base' %}
+
+
+{% block seo %}
+{% endblock %}
+
+{% block main %}
+  {{ block('detail_page') }}
+{% endblock %}
+
+{% block detail_page %}
+  <article>
+    {{ block('detail_header') }}
+    {{ block('detail_main') }}
+    {{ block('detail_footer') }}
+  </article>
+{% endblock %}
+
+{% block detail_header %}
+{% endblock %}
+
+{% block detail_main %}
+  {% include '_components/_pageBuilder' with {
+    params: {
+      components: entry.pageBuilder
+    }
+  } %}
+{% endblock %}
+
+{% block detail_footer %}{% endblock %}
